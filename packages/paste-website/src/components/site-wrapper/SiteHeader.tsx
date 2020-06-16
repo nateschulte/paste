@@ -39,7 +39,7 @@ export const SiteHeader: React.FC<{}> = () => {
               minWidth={['size20', 'size20', 'size20', 'size40']}
               marginBottom={['space40', 'space40', 'space40', 'space0']}
             >
-              <Search />
+              <input className="search-input" />
             </Box>
             <ContactUsMenu />
             <Stack orientation="horizontal" spacing="space30">

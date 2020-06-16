@@ -187,6 +187,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-algolia-docsearch`,
+      options: {
+        apiKey: process.env.DOCSEARCH_APIKEY,
+        indexName: 'twilio_paste',
+        inputSelector: '.search-input',
+        debug: true,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-algolia`,
     //   options: {
