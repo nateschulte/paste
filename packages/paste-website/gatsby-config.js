@@ -192,7 +192,7 @@ module.exports = {
       options: {
         apiKey: process.env.DOCSEARCH_APIKEY,
         indexName: 'twilio_paste',
-        inputSelector: '.search-input',
+        inputSelector: '#search-input',
         debug: true,
       },
     },

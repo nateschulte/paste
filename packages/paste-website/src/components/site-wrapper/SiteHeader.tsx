@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Box} from '@twilio-paste/box';
 import {Stack} from '@twilio-paste/stack';
 import {Anchor} from '@twilio-paste/anchor';
+import {FormInput} from '@twilio-paste/form';
 import {useTheme} from '@twilio-paste/theme';
 import {ThemeSwitcher} from '../ThemeSwitcher';
 import {Search} from '../search';
@@ -39,7 +40,7 @@ export const SiteHeader: React.FC<{}> = () => {
               minWidth={['size20', 'size20', 'size20', 'size40']}
               marginBottom={['space40', 'space40', 'space40', 'space0']}
             >
-              <input className="search-input" />
+              <FormInput id="search-input" type="search" placeholder="Search..." />
             </Box>
             <ContactUsMenu />
             <Stack orientation="horizontal" spacing="space30">
