@@ -57,6 +57,7 @@
     "@twilio-paste/tabs": "^0.1.6",
     "@twilio-paste/tabs-primitive": "^0.1.4",
     "@twilio-paste/text": "^2.1.16",
+    "@twilio-paste/tooltip": "^0.0.0",
     "@twilio-paste/tooltip-primitive": "^0.1.0",
     "@twilio-paste/truncate": "^1.0.9"
   },
