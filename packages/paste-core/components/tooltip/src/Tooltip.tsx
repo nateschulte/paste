@@ -45,7 +45,6 @@ type PlacementOptions =
 
 export interface TooltipProps {
   children: NonNullable<React.ReactElement>;
-  // children: NonNullable<React.ForwardRefExoticComponent<any>>;
   baseId: string;
   placement?: PlacementOptions;
   text: string;
