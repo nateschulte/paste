@@ -105,4 +105,12 @@ storiesOf('Components|Tooltip', module)
   })
   .add('Custom Tooltip', () => {
     return <CustomExample />;
+  })
+  .add('Multiple Tooltips', () => {
+    return (
+      <>
+        <CustomExample />
+        <Example />
+      </>
+    );
   });
