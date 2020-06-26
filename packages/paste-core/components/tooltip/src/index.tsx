@@ -45,7 +45,7 @@ type PlacementOptions =
 
 export interface TooltipProps {
   children: NonNullable<React.ReactElement>;
-  baseId: string;
+  baseId?: string;
   placement?: PlacementOptions;
   text: string;
 }
@@ -74,7 +74,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(({baseId, childre
 
 if (process.env.NODE_ENV === 'development') {
   Tooltip.propTypes = {
-    baseId: PropTypes.string.isRequired,
+    baseId: PropTypes.string,
     children: PropTypes.element.isRequired,
     placement: PropTypes.oneOf([
       'auto-start',
