@@ -32,10 +32,10 @@ const IconButtonExample: React.FC<{}> = () => {
 const CustomExample: React.FC<{}> = () => {
   const id = useUID();
   return (
-    <Box display="flex">
+    <Box display="flex" alignItems="center">
       <Text as="span">Tooltip should appear from the icon.</Text>
       <Tooltip baseId={id} text="Welcome to Paste!">
-        <Box as="span">
+        <Box as="span" display="inline-flex">
           <InformationIcon decorative={false} title="Open Tooltip" />
         </Box>
       </Tooltip>
