@@ -29,10 +29,10 @@ render(
 export const customExample = `
 const TooltipCustomExample = () => {
   return (
-    <Box display="flex">
+    <Box display="flex" alignItems="center">
       <Text as="span">Tooltip should appear from the icon.</Text>
       <Tooltip baseId="tooltip-custom" text="Welcome to Paste!">
-        <Box as="span">
+        <Box as="span" display="inline-flex">
           <InformationIcon decorative={false} title="Open Tooltip" />
         </Box>
       </Tooltip>
