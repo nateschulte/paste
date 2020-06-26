@@ -3,7 +3,12 @@ import * as PropTypes from 'prop-types';
 import {Box, BoxProps, safelySpreadBoxProps} from '@twilio-paste/box';
 import {StyledBase} from '@twilio-paste/theme';
 import {Text} from '@twilio-paste/text';
-import {useTooltipPrimitiveState, TooltipPrimitive, TooltipPrimitiveReference} from '@twilio-paste/tooltip-primitive';
+import {
+  TooltipPrimitiveInitialState,
+  useTooltipPrimitiveState,
+  TooltipPrimitive,
+  TooltipPrimitiveReference,
+} from '@twilio-paste/tooltip-primitive';
 import {TooltipArrow} from './TooltipArrow';
 
 const StyledTooltip = React.forwardRef<HTMLDivElement, BoxProps>(({style, ...props}, ref) => {
@@ -26,32 +31,13 @@ const StyledTooltip = React.forwardRef<HTMLDivElement, BoxProps>(({style, ...pro
   );
 });
 
-type PlacementOptions =
-  | 'auto-start'
-  | 'auto'
-  | 'auto-end'
-  | 'top-start'
-  | 'top'
-  | 'top-end'
-  | 'right-start'
-  | 'right'
-  | 'right-end'
-  | 'bottom-end'
-  | 'bottom'
-  | 'bottom-start'
-  | 'left-end'
-  | 'left'
-  | 'left-start';
-
-export interface TooltipProps {
+export interface TooltipProps extends TooltipPrimitiveInitialState {
   children: NonNullable<React.ReactElement>;
-  baseId?: string;
-  placement?: PlacementOptions;
   text: string;
 }
 
-const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(({baseId, children, placement, text, ...props}, ref) => {
-  const tooltip = useTooltipPrimitiveState({baseId, placement});
+const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(({children, text, ...props}, ref) => {
+  const tooltip = useTooltipPrimitiveState({...props});
   return (
     <>
       {React.Children.only(
@@ -74,25 +60,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(({baseId, childre
 
 if (process.env.NODE_ENV === 'development') {
   Tooltip.propTypes = {
-    baseId: PropTypes.string,
     children: PropTypes.element.isRequired,
-    placement: PropTypes.oneOf([
-      'auto-start',
-      'auto',
-      'auto-end',
-      'top-start',
-      'top',
-      'top-end',
-      'right-start',
-      'right',
-      'right-end',
-      'bottom-end',
-      'bottom',
-      'bottom-start',
-      'left-end',
-      'left',
-      'left-start',
-    ]),
     text: PropTypes.string.isRequired,
   };
 }
