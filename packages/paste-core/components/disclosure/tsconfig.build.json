@@ -1,0 +1,54 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../../layout/absolute"
+    },
+    {
+      "path": "../../primitives/box"
+    },
+    {
+      "path": "../button"
+    },
+    {
+      "path": "../card"
+    },
+    {
+      "path": "../../../paste-design-tokens"
+    },
+    {
+      "path": "../../primitives/disclosure"
+    },
+    {
+      "path": "../heading"
+    },
+    {
+      "path": "../../../paste-icons"
+    },
+    {
+      "path": "../spinner"
+    },
+    {
+      "path": "../../../paste-style-props"
+    },
+    {
+      "path": "../../../paste-libraries/styling"
+    },
+    {
+      "path": "../../primitives/text"
+    },
+    {
+      "path": "../../../paste-theme"
+    },
+    {
+      "path": "../../../paste-types"
+    }
+  ]
+}
