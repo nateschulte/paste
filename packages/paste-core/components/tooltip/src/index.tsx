@@ -25,7 +25,7 @@ const StyledTooltip = React.forwardRef<HTMLDivElement, BoxProps>(({style, ...pro
       padding="space40"
       paddingBottom="space30"
       paddingTop="space30"
-      zIndex="zIndex10"
+      zIndex="zIndex90"
       _focus={{outline: 'none'}}
       style={style}
       ref={ref}
@@ -43,7 +43,7 @@ const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(({children, text,
   return (
     <>
       {React.Children.only(
-        <TooltipPrimitiveReference {...tooltip} ref={ref} {...children.props}>
+        <TooltipPrimitiveReference {...tooltip} ref={ref}>
           {referenceProps => React.cloneElement(children, referenceProps)}
         </TooltipPrimitiveReference>
       )}
