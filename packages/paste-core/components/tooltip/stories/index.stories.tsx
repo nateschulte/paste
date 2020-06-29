@@ -36,7 +36,7 @@ const CustomExample: React.FC<{}> = () => {
       <Text as="span">Tooltip should appear from the icon.</Text>
       <Tooltip baseId={id} text="Welcome to Paste!">
         <Box as="span" display="inline-flex">
-          <InformationIcon decorative={false} title="Open Tooltip" />
+          <InformationIcon decorative />
         </Box>
       </Tooltip>
     </Box>
