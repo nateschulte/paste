@@ -15,7 +15,6 @@ import Changelog from '@twilio-paste/tooltip/CHANGELOG.md';
 import {Tooltip} from '@twilio-paste/tooltip';
 import {Callout, CalloutTitle, CalloutText} from '../../../components/callout';
 import {SidebarCategoryRoutes} from '../../../constants';
-import {customExample, defaultExample, rightExample} from '../../../component-examples/TooltipExamples';
 
 export const pageQuery = graphql`
   {
@@ -79,7 +78,7 @@ Tooltips follow these accessibility guidelines:
 
 - Tooltip has the role `tooltip`
 - The child element has `aria-describedby` referring to the Tooltip
-- The child element must be focusable
+- The child element **must be** focusable
 - Pressing the escape key hides the current visible tooltip.
 
 ## Examples
@@ -91,9 +90,10 @@ Tooltips follow these accessibility guidelines:
     Tooltip,
     Button,
   }}
-  noInline
 >
-  {defaultExample}
+  {`<Tooltip baseId="tooltip" text="Black Lives Matter. We stand with the Black community.">
+  <Button variant="primary">✊ Action</Button>
+</Tooltip>`}
 </LivePreview>
 
 ### Controlling placement
@@ -106,9 +106,10 @@ available in the [props description here](#tooltip).
     Tooltip,
     Button,
   }}
-  noInline
 >
-  {rightExample}
+  {`<Tooltip baseId="tooltip-right" text="Welcome to Paste!" placement="right-start">
+  <Button variant="primary">Open Tooltip</Button>
+</Tooltip>`}
 </LivePreview>
 
 ### Custom element
@@ -123,9 +124,15 @@ Box primitive passes a `ref`, it can be used to wrap a non-focusable element.
     InformationIcon,
     Text,
   }}
-  noInline
 >
-  {customExample}
+  {`<Box display="flex" alignItems="center">
+  <Text as="span">Tooltip should appear from the icon.</Text>
+  <Tooltip baseId="tooltip-custom" text="Welcome to Paste!">
+    <Box as="span" display="inline-flex">
+      <InformationIcon decorative={false} title="Open Tooltip" />
+    </Box>
+  </Tooltip>
+</Box>`}
 </LivePreview>
 
 ## Anatomy
