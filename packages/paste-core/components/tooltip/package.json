@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "category": "interaction",
   "status": "alpha",
-  "description": "Twilio's Tooltip component.",
+  "description": "The Tooltip is a popup that displays clarifying text related to an element that has been focused or hovered on.",
   "author": "Twilio Inc.",
   "license": "MIT",
   "main:dev": "src/index.tsx",
