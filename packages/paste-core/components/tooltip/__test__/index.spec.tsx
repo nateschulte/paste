@@ -17,19 +17,11 @@ const TooltipMock: React.FC<{}> = () => {
 
 describe('Tooltip', () => {
   describe('Render', () => {
-    it('should render', () => {
-      const {asFragment} = render(<TooltipMock />);
-      expect(asFragment()).toMatchSnapshot();
-    });
-
+    render(<TooltipMock />);
     it('should render a tooltip button with aria attributes', () => {
-      render(<TooltipMock />);
       const renderedTooltipButton = screen.getByRole('button');
       expect(renderedTooltipButton.getAttribute('aria-describedby')).toEqual('tooltip-example');
-    });
 
-    it('should render a tooltip with the tooltip role', () => {
-      render(<TooltipMock />);
       const renderedTooltip = screen.getByTestId('tooltip-example');
       expect(renderedTooltip.getAttribute('role')).toEqual('tooltip');
     });
