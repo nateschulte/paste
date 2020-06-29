@@ -72,15 +72,6 @@ The Tooltip component is a popup that displays text related to an element when t
 the keyboard or on mouse hover. Tooltip follows the
 [WAI-ARIA Tooltip Pattern](https://www.w3.org/TR/wai-aria-practices/#tooltip).
 
-### Accessibility
-
-Tooltips follow these accessibility guidelines:
-
-- Tooltip has the role `tooltip`
-- The child element has `aria-describedby` referring to the Tooltip
-- The child element **must be** focusable
-- Pressing the escape key hides the current visible tooltip.
-
 ## Examples
 
 ### Basic Tooltip
@@ -99,7 +90,8 @@ Tooltips follow these accessibility guidelines:
 ### Controlling placement
 
 The placement of the tooltip is configurable via the `placement` prop. The available placement options are
-available in the [props description here](#tooltip).
+available in the [props description here](#tooltip). By default the tooltip is positioned automatically so
+you don't have to worry about it going off the page, or being covered by another element.
 
 <LivePreview
   scope={{
@@ -112,10 +104,19 @@ available in the [props description here](#tooltip).
 </Tooltip>`}
 </LivePreview>
 
-### Custom element
+### Focusable element
 
-A tooltip can be placed on any focusable element, such as a button or a React component with a `ref`. Since our
-Box primitive passes a `ref`, it can be used to wrap a non-focusable element.
+A tooltip can be placed on any **focusable** element, such as a button or a React component with a `ref`. Since our
+Box primitive passes a `ref`, it can be used to wrap a non-focusable element such as an icon. If you do use an icon,
+set it to decorative by passing the `decorative` prop. It can be decorative since the tooltip is adding the informative
+content, and not the icon itself.
+
+<Callout variant="warning">
+  <CalloutText>
+    🚨<strong>CAUTION!</strong>🚨 Make sure not to abuse this method. Tooltips should only be placed on elements that
+    are <strong>focusable</strong>, and that make sense to the user as a tooltip.
+  </CalloutText>
+</Callout>
 
 <LivePreview
   scope={{
@@ -129,7 +130,7 @@ Box primitive passes a `ref`, it can be used to wrap a non-focusable element.
   <Text as="span">Tooltip should appear from the icon.</Text>
   <Tooltip baseId="tooltip-custom" text="Welcome to Paste!">
     <Box as="span" display="inline-flex">
-      <InformationIcon decorative={false} title="Open Tooltip" />
+      <InformationIcon decorative />
     </Box>
   </Tooltip>
 </Box>`}
