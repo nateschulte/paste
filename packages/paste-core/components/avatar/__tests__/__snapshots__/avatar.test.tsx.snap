@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar image should render responsive css with an image 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  box-sizing: border-box;
+  background-color: colorBackgroundPrimaryLight;
+  border-radius: borderRadiusCircle;
+  overflow: hidden;
+  width: sizeIcon30;
+  height: sizeIcon30;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-2 {
+    width: sizeIcon40;
+    height: sizeIcon40;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-2 {
+    width: sizeIcon90;
+    height: sizeIcon90;
+  }
+}
+
+.emotion-1 {
+  margin: 0;
+  padding: 0;
+  font-size: fontSize30;
+  font-weight: fontWeightSemibold;
+  line-height: lineHeight30;
+  text-align: center;
+  color: colorText;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-1 {
+    font-size: fontSize40;
+    line-height: lineHeight40;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-1 {
+    font-size: fontSize60;
+    line-height: lineHeight90;
+  }
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: sizeIcon30;
+  height: sizeIcon30;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    width: sizeIcon40;
+    height: sizeIcon40;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-0 {
+    width: sizeIcon90;
+    height: sizeIcon90;
+  }
+}
+
+<div
+    class="emotion-2"
+    overflow="hidden"
+  >
+    <div
+      class="emotion-1"
+      color="colorText"
+      font-size="fontSize30,fontSize40,fontSize60"
+      font-weight="fontWeightSemibold"
+    >
+      <img
+        alt="avatar example"
+        class="emotion-0"
+        src="/avatars/avatar2.png"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar intials should render responsive css 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  box-sizing: border-box;
+  background-color: colorBackgroundPrimaryLight;
+  border-radius: borderRadiusCircle;
+  overflow: hidden;
+  width: sizeIcon10;
+  height: sizeIcon10;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-1 {
+    width: sizeIcon60;
+    height: sizeIcon60;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-1 {
+    width: sizeIcon100;
+    height: sizeIcon100;
+  }
+}
+
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  font-size: fontSize10;
+  font-weight: fontWeightSemibold;
+  line-height: lineHeight10;
+  text-align: center;
+  color: colorText;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    font-size: fontSize40;
+    line-height: lineHeight60;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-0 {
+    font-size: fontSize80;
+    line-height: lineHeight100;
+  }
+}
+
+<div
+    class="emotion-1"
+    overflow="hidden"
+  >
+    <div
+      class="emotion-0"
+      color="colorText"
+      font-size="fontSize10,fontSize40,fontSize80"
+      font-weight="fontWeightSemibold"
+    >
+      ST
+    </div>
+  </div>
+</DocumentFragment>
+`;
